@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Week 2</title>
+</head>
+<body>
+    <h1>Examples</h1>
+    <ol>
+        <li><a href="src/Chapter 2 example.html">Chapter 2</a></li>
+        <li><a href="src/Chapter 3 example.html">Chapter 3</a></li>
+        <li><a href="src/Chapter 4 example.html">Chapter 4</a></li>
+    </ol>
+    <h1>Important New Functions</h1>
+    <h2>array</h2>
+    <p>
+        pop(), push(), shift(), unshift(), concat(), join(), slice(), splice(), reverse(), from(), forEach(), map(),
+        reduce(), filter()
+    </p>
+    <h2>set</h2>
+    <p>has()</p>
+    <h2>map</h2>
+    <p>keys(), values(), entries()</p>
+    <h2>string</h2>
+    <p>split()</p>
+    <h1>Notes</h1>
+    <p>
+        variable declarations are ‘const’ for variables that will not be reassigned, and ‘let’ for variables that will
+        be reassigned. Both have block scope
+    </p>
+    <p>
+        initializing a variable without using ‘const’ or ‘let’ will make that variable global, regardless of where it
+        is initialized.
+    </p>
+    <p>
+        while variable names may start with _ and $, they are commonly used in popular libraries and thus are suggested
+        to not be used.
+    </p>
+    <p>
+        you can access a primitive datatype's properties by using brackets, surrounding the property name in quotation
+        marks. This functions as the dot operator.
+    </p>
+    <p>+ works to concatenate strings</p>
+    <p>
+        use backtick (`) to create a ‘template literal’, essentially a string that allows you to use either form of
+        quotation marks within the string without problems, and also allows for JavaScript code to be inserted into the
+        string and the result will be displayed. The JavaScript expression is placed inside the curly braces with a $
+        character in front of them.
+    </p>
+    <p>
+        there is a primitive data type called Symbol. it does not have a literal form, so it must be initialized with
+        the Symbol() function. It is best to describe what the symbol is inside the ().
+    </p>
+    <p>the number data type includes both ints and floats</p>
+    <p>a number starting with 0x is in hexadecimal notation</p>
+    <p>a number starting with 0o (zero and the letter o) is in octal notation</p>
+    <p>a number starting with 0b is in binary notation</p>
+    <p>JavaScript supports scientific notation, referred to as exponential notation</p>
+    <p>exponents can be calculated by using **</p>
+    <p>Infinity is a special error to state that a number has gone beyond what the language can handle</p>
+    <p>== ignores data type, === does not. the same for != and !==</p>
+    <p>initialize arrays in form ‘const name = []’</p>
+    <p>
+        arrays do not need to have their size declared upon initialization, simply assigning a value to an index will
+        create it. essentially, arrays are just a list of variables that can be added to easily. the variables don’t
+        even have to share the same type
+    </p>
+    <p>
+        you can use array notation to assign multiple variables at a time, as in [x,y] = [0,1]. this assigns x to 0 and
+        y to 1. this can also be used to quickly switch the values in variables by using [x,y] = [y,x]
+    </p>
+    <p>
+        you can manually change the length of an area using .length this can add undefined values at the end, or
+        completely remove the indexes after that length
+    </p>
+    <p>
+        sets cannot have duplicated values, attempts to add values that are already included are ignored. Non primitive
+        values are always considered unique though
+    </p>
+    <p>
+        including a string as an argument to a set will add each individual letter, with duplicates being ignored.
+        Use the add() function to add whole strings.
+    </p>
+    <p>sets do not have an index like an array.</p>
+    <p>
+        objects included in a set are retained even if the original object is nullified. WeakSets do not have this
+        problem, but can’t be used with primitive data types. However, WeakSets cannot list the values they contain
+    </p>
+    <p>
+        JavaScript allows functions to work as variables, allowing them to be passed to and from other functions and
+        stored in other objects such as arrays
+    </p>
+    <p>
+        there are three ways to define a function. the first is called a named function, and is how other languages
+        define them. the second is to assign the function to a variable, which can be used whether the function is named
+        or not, but require a ; after the end }. the third is called the arrow function, because it uses the ‘=>’
+        symbol, with the parameters before and the body after, though it must be assigned to a variable to be called
+        since it never has a name
+    </p>
+    <p>if a function has been assigned to a variable, then the variable name is used in place of any function name</p>
+    <p>
+        every function has a variable named arguments, which stores every argument sent to the function when it is
+        invoked in an object similar to an array. This can be converted into an array by putting the rest operator (…)
+        in front of the last parameter in the declaration
+    </p>
+    <p>
+        default values can be given to parameters by simply assigned the value to the parameter in the function
+        definition. default values must always come after any values that do not have a default
+    </p>
+    <p>arrow functions don’t need the return keyword as long as they are only one line</p>
+    <li><a href="../index.html">back</a></li>
+</body>
+</html>
