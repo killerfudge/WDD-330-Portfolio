@@ -8,7 +8,71 @@
     <h1>Examples</h1>
     <ol>
         <li><a href="src/Chapter 5 example.html">Chapter 5</a></li>
+        <li><a href="src/Chapter 6 example.html">Chapter 6</a></li>
+        <li><a href="src/Chapter 7 example.html">Chapter 7</a></li>
+        <li><a href="src/heroes.html">Heroes Example</a></li>
+        <li><a href="src/events.html">Events Example</a></li>
     </ol>
+    <h1>Important New Functions</h1>
+    <h2>Objects</h2>
+    <p>hasOwnProperty(), keys(), values(), entries()</p>
+    <h2>JSON</h2>
+    <p>parse(), stringify()</p>
+    <h2>Math</h2>
+    <p>ceil(), floor(), round(), trunc(), cbrt(), hypot()</p>
+    <h2>The DOM</h2>
+    <p>
+        document.body, .nodeType, .nodeName, document.images, document.anchors, document.links, document.forms,
+        document.getElementsByTagName(), querySelector(), document.querySelectorAll(), classList.add(),
+        classList.remove(), classList.toggle(), classList.contains(), document.createElement(),
+        document.createTextNode(), appendChild(), insertBefore(), removeChild(), replaceChild(), .style.display,
+        addEventListener(), removeEventListener(), preventDefault(), event.stopPropagation()
+    </p>
+    <h1>Notes</h1>
+    <p>When reverencing a variable contained within an object, using the ‘this’ keyword is more reliable</p>
+    <p>
+        ‘this’ is evaluated during runtime and depends on the current context, so a function using ‘this’ can be used
+        by multiple objects – “if obj.f() is called, then this is obj during the call of f”
+    </p>
+    <p>arrow functions do not have their own ‘this’ and so use the ‘this’ from the outer context</p>
+    <p>
+        variables within objects are defined as key: value pairs, with comma separations, instead of variable = value
+        like I am used to
+    </p>
+    <p>All objects are able to be modified while the program is running, even if declared using ‘const’</p>
+    <p>objects are assigned to variables with everything contained within ‘{}’ after the ‘='</p>
+    <p>if the property key is the same as the variable name that goes with it, then you can just include the name</p>
+    <p>
+        while dot notation is more common to access the values within an object, you can also use a string form of the
+        name within []. this allows you to evaluate an expression and use it as a property key, and nonstandard property
+        and method names require this notation
+    </p>
+    <p>the value of a property is allowed to be a JavaScript expression</p>
+    <p>Symbol objects can be used as keys by enclosing the Symbol’s name in []</p>
+    <p>objects can contain other objects</p>
+    <p>all objects are assigned by reference</p>
+    <p>object literals can be parameters for functions, allowing the parameters to be passed by name and in any order</p>
+    <p>the DOM represents a html document as a grouping of nodes laid out in a tree</p>
+    <p>the DOM treats whitespace between tags as a node</p>
+    <p>
+        when interacting with CSS using the DOM, any CSS property names separated with a ‘-‘ are instead written in
+        camelCase
+    </p>
+    <p>
+        the recommended way to handle events is to use event listeners. Inline event handlers are not recommended since
+        they mix the JavaScript with the markup
+    </p>
+    <p>
+        functions are not followed by () when inside the argument for event listeners, as that would cause the function
+        to be called when the listener is created, instead of when the event happens
+    </p>
+    <p>the function used in an event listener needs to be named in order to remove it</p>
+    <p>
+        clicking on one element means that you are also clicking on all elements that contain that element, such as the
+        list that contains an item clicked, or the overall body and html tags. As event move through the different tags,
+        they are said to propagate, with bubbling referring to going from child to parent, and capturing from parent to
+        child. bubbling is the default
+    </p>
     <li><a href="../index.html">back</a></li>
 </body>
 </html>
