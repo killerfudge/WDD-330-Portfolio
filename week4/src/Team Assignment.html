@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+    table,
+    tr,
+    td {
+      border-collapse: collapse;
+    }
+
+    tr:nth-child(1),
+    tr:nth-child(2) {
+      border-bottom: 1px black solid;
+    }
+
+    td:nth-child(1),
+    td:nth-child(2) {
+      border-right: 1px black solid;
+    }
+
+    td {
+      width: 100px;
+      height: 100px;
+      text-align: center;
+    }
+  </style>
+
+</head>
+
+<body>
+<table id="board">
+    <tr>
+        <td id="1-1"></td>
+        <td id="1-2"></td>
+        <td id="1-3"></td>
+    </tr>
+    <tr>
+        <td id="2-1"></td>
+        <td id="2-2"></td>
+        <td id="2-3"></td>
+    </tr>
+    <tr>
+        <td id="3-1"></td>
+        <td id="3-2"></td>
+        <td id="3-3"></td>
+    </tr>
+</table>
+
+<br>
+<div>Player: <span id="player">1</span></div>
+<br>
+<button onclick="reset()">Reset</button>
+
+<script>
+    let player = 1;
+
+    document.getElementById("board").addEventListener("click", () => {
+      markBox(event.target.id)
+    });
+
+    function markBox(boxId) {
+      let boxContents = document.getElementById(boxId).textContent;
+      if (boxContents != "X" && boxContents != "O") {
+        if (player == 1) {
+          document.getElementById(boxId).textContent = "X";
+          player = 2;
+        } else {
+          document.getElementById(boxId).textContent = "O";
+          player = 1;
+        }
+
+        document.getElementById("player").textContent = player;
+        checkWin();
+
+      } else {
+        alert("invalid move");
+      }
+    }
+
+    function reset() {
+      for (let row = 1; row < 4; row++) {
+        for (let col = 1; col < 4; col++) {
+          document.getElementById(row + "-" + col).textContent = "";
+        }
+      }
+      player = 1;
+      document.getElementById("player").textContent = player;
+    }
+
+    /*function checkWin() {
+      let inARow = 1;
+      let team = "";
+      for (let row = 1; row < 4; row++) {
+        for (let col = 1; col < 4; col++) {
+          let boxContents = document.getElementById(row + "-" + col).textContent;
+          if (row == 1) {
+            if (boxContents == "X" || boxContents == "O") {
+              team = boxContents;
+            }
+          }
+        }
+      }
+    } */
+  </script>
+</body>
+
+</html>

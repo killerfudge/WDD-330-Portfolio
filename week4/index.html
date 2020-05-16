@@ -8,15 +8,90 @@
     <h1>Examples</h1>
     <ol>
         <li><a href="src/Chapter 8 example.html">Chapter 8</a></li>
-        <li><a href="src/Chapter 6 example.html">Chapter 6</a></li>
-        <li><a href="src/Chapter 7 example.html">Chapter 7</a></li>
+        <li><a href="src/Chapter 12 example.html">Chapter 12</a></li>
         <li><a href="src/search.html">Search Example</a></li>
         <li><a href="src/hero.html">Hero Example</a></li>
+        <li><a href="src/Team Assignment.html">Team Assignment</a></li>
     </ol>
     <h1>Important New Functions</h1>
-
+    <h2>form</h2>
+    <p>.elements, reset()</p>
+    <h2>object</h2>
+    <p>
+        getPrototypeOf(), isPrototypeOf(), hasOwnProperty(), propertyIsEnumerable(), getOwnPropertyDescriptor(),
+        defineProperty(), create(), assign(), mixin()
+    </p>
+    <h2>functions</h2>
+    <p>call()</p>
     <h1>Notes</h1>
-
+    <p>
+        use document.forms to collect all the form in the document. Even if there is only one form, it will still be a
+        collection and require index notation.
+    </p>
+    <p>
+        while the submit() function can be used, button and input elements with the type ‘submit’ and inputs with the
+        type ‘image’ can also be used to manually submit
+    </p>
+    <p>buttons with type ‘reset’ will do the same as the function, though they are considered poor usability</p>
+    <p>
+        certain events are specific to forms, such as the focus event, which is activated whenever the cursor is placed
+        inside the element, and the blur event, which is activated when the cursor leaves the element
+    </p>
+    <p>the change event happens when the cursor leaves an element after it has been changed.</p>
+    <p>
+        a submit event can be used to intercept a form before the normal submission takes place, allowing it to be
+        interacted with
+    </p>
+    <p>
+        different types of input elements: text(default), password, checkbox, radio button, hidden, file, and additional
+        elements that have been added and are becoming supported
+    </p>
+    <p>
+        while putting type=’text’ for a text input is not necessary, it helps make the purpose of the input clear and is
+        therefore recommended
+    </p>
+    <p>giving more than one element the same name property allows them to be accessed as a collection</p>
+    <p>if a browser does not support a new input element then it will be displayed as a normal input</p>
+    <p>
+        it is recommended to validate form both client side and server side, as the JavaScript code can be altered and
+        the client side can even be skipped entirely
+    </p>
+    <p>though HTML5 has its own validation API, not all browsers support it</p>
+    <p>JavaScript allows OOP through objects, referred to as prototype-based, but also includes classes</p>
+    <p>
+        entering only one parameter into the Array constructor set the length property of the array to that parameter
+        and is full of undefined
+    </p>
+    <p>
+        the constructor property can be used to create a copy of an object even when it is unknown what the name of the
+        constructor was
+    </p>
+    <p>
+        the static keyword before a function name makes it so that only the class can call that function, not the
+        objects created from the class
+    </p>
+    <p>
+        the prototype property allows creation of an object that all shares all properties with all instances of the
+        class or constructor function it came from, effectively allowing manipulation of a class after it has been
+        created
+    </p>
+    <p>arrays and objects should never be created inside a prototype</p>
+    <p>
+        to make something within a class private, simply declare it like normal instead of using this.propertyName =
+        propertyValue
+    </p>
+    <p>
+        non-enumerable properties will not appear as properties of objects when their properties are displayed. This is
+        done with built in functions so that they do not block out the user created ones
+    </p>
+    <p>
+        each property has various attributes associated with it: value, writable, enumerable, and configurable. these
+        attributes are unable to be changed by assignment, with the exception of value, and thus require special
+        functions to control
+    </p>
+    <p>if a method lacks an important return value, it is suggested to return ‘this’ so that chaining is possible</p>
+    <p>be careful of using ‘this’ inside nested functions, as it can cause it to lose its scope</p>
+    <p>you can get a reference to a function within an object by simply not including the parenthesis</p>
     <li><a href="../index.html">back</a></li>
 </body>
 </html>
