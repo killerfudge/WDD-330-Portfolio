@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Important New Functions</h1>
+    <h2>Console</h2>
+    <p>trace()</p>
+    <h2>error</h2>
+    <p>.name, .message</p>
+    <h1>Notes</h1>
+    <p>Exceptions are errors that return something</p>
+    <p>A stack trace is a sequence of functions that helps to point to where the error occurred.</p>
+    <p>warnings are errors that won’t cause the program to crash, but may make it run incorrectly</p>
+    <p>runtime errors will cause the JavaScript on the page to stop functioning, but the HTML will still be there</p>
+    <p>JavaScript doesn’t always alert the programmer when there is an error, instead failing silently.</p>
+    <p>
+        strict mode is a mode that catches more errors because it counts things that were previously regarded as simply
+        poor coding practices as actual errors. It is activated by simply putting the string ‘use strict’ as the first
+        line in the JavaScript file. This can also be done inside each function if the desire is to have it be per
+        function instead of for the entire file
+    </p>
+    <p>linting tools can be used to enforce certain coding practices, useful when working in a group</p>
+    <p>
+        feature detection is important with JavaScript since it is being updated constantly and browsers support
+        different amounts of the specification. This is done by including an if statement that checks to see if the
+        feature exists before trying to use it.
+    </p>
+    <p>
+        the debugger keyword can be used to create a breakpoint in the code that will allow you to check how things are
+        progressing and see the value of the variables in order to ensure the program is working as expected
+    </p>
+    <p>error objects can be declared by the programmer in order to have them deliver personal error messages</p>
+    <p>types of errors: RangeError, ReferenceError, SyntaxError, TypeError, URIError, InternalError</p>
+    <p>
+        while you can technically throw anything in JavaScript, it is recommended to only throw exceptions. Either way,
+        throwing something will stop the execution of the program unless caught with a try-catch statement
+    </p>
+    <p>while you certainly can write your own tests, there are testing frameworks that help make the process easier</p>
+    <li><a href="../index.html">back</a></li>
+</body>
+</html>
