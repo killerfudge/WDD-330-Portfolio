@@ -1,2 +1,3 @@
 import Todos from './Todos.js';
-const todo = Todos('list', key);
+let todo = new Todos('list', 'stuff');
+todo.listTodos();
