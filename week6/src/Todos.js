@@ -67,7 +67,6 @@ export default class Todos {
             //display the number of items in the footer
             const item = document.getElementById("total")
             item.innerHTML = `${count} tasks left`;
-            alert(item);
         } else if(event.target === document.getElementById('active')) {
             let tempList = null;
             todoList.forEach(index => {
@@ -93,8 +92,6 @@ export default class Todos {
             //display the number of items in the footer
             document.getElementById("footer").innerHTML = `${count} tasks left`;
         }
-        alert('what');
-        alert('for some reason it resets the page at the end of this function. I have no idea why.')
     }
 }
 
