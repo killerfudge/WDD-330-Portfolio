@@ -13,7 +13,104 @@
         <li><a href="src/todo.html">To Do</a></li>
     </ol>
     <h1>Important New Functions</h1>
-
+    <h2>functions</h2>
+    <p>call(), apply()</p>
+    <h2>promise</h2>
+    <p>then(), catch()</p>
+    <h2>generators</h2>
+    <p>next()</p>
+    <h2>response</h2>
+    <p>.ok, .statusText,  text(), blob(), json()</p>
+    <h2>headers</h2>
+    <p>has(), get(), set(), append(), delete(), keys(), values(), entries()</p>
+    <h1>Notes</h1>
+    <p>Functions can have their own properties and methods.</p>
+    <p>a functions length property is how many parameters it takes.</p>
+    <p>
+        properties can be added to functions in the same way they are added to any object, by simply using the dot
+        operator, declaring the name, and setting it equal to what you want it to be.
+    </p>
+    <p>
+        memorization is a way of caching a value a function was used, which can be useful if the function requires
+        intense calculation as it can allow you to save a previous computation and simply return that result instead of
+        calculating it again.
+    </p>
+    <p>
+        IIFE or Immediately Invoked Function Expression are invoked as soon as declared, achieved by putting the entire
+        declaration inside parentheses and added another set at the end. This is useful to immediately accomplish a task
+        without cluttering up the global namespace. Good for startup code that is only needed to run once.
+    </p>
+    <p>
+        Functions can redefine themselves by assigning a new function to a variable with the same name as the function.
+        After it has been called the first time, the function will always be the rewritten version, unless the function
+        was assigned to a variable before it was called for the first time. Redefining a function will remove any
+        properties that were previously assigned to it.
+    </p>
+    <p>
+        The Lazy Definition Pattern involves writing a function to perform some initialization actions, then redefine
+        itself for later calls. One way this is useful is to check if a feature is available the first time the function
+        is called, then have it redefine itself so that it doesn’t have to check for each future call.
+    </p>
+    <p>
+        You can use events and callbacks to build asynchronous programs, allowing the program to continue while other
+        parts are working on their section. Asynchronous functions always wait until the current stack is clear before
+        they are called.
+    </p>
+    <p>
+        It is a good coding practice to make the first parameter in a callback an error in order to ensure that any
+        errors are handled.
+    </p>
+    <p>A promise is a way of using callbacks that simplifies the process and tries to make things more clear.</p>
+    <p>
+        another way to work asynchronously is to use the command async before declaring a function, and the await
+        command before calling another function to prevent the line of code from running until that function finishes.
+        Needs to be inside a try catch statement.
+    </p>
+    <p>functions can also return other functions, useful for creating similar yet distinct functions.</p>
+    <p>
+        a function that was initialized inside another function, and then returned by that function, maintains access
+        to all of the variables initialized inside the function that declared it.
+    </p>
+    <p>
+        generator functions can be used to create iterators. an ‘*’ is placed after the word function, and then the
+        command yield is used instead of return, allowing the generator function to save it’s stop until next() function
+        is called again.
+    </p>
+    <p>
+        pure functions have three requirements. 1) The return value of the function depends only on the arguments passed
+        to it. 2) The function does not affect anything outside of the function. 3) The function will always return the
+        same thing when passed the same values.
+    </p>
+    <p>
+        currying is a process where a function that was not supplied all of the arguments returns a function that
+        requires the other parameters and the final result is only supplied when all parameters have been given.
+    </p>
+    <p>
+        Ajax allows a webpage to communicate asynchronously with a server and update sections of the page without
+        reloading the whole thing.
+    </p>
+    <p>
+        The Fetch API provides a global fetch() function that uses Promises to gather data from a server provided as an
+        argument.
+    </p>
+    <p>
+        The Fetch API uses Response object that have several properties and methods that help in responding to data
+        received from the server.
+    </p>
+    <p>
+        while response objects are mostly received from requests, they can be manually created if needed for testing
+        purposes
+    </p>
+    <p>
+        additional control over the fetch request can be made by declaring a request object that has the following
+        properties: url, method, headers, mode, cache, credentials, and redirect.
+    </p>
+    <p>headers contain additional information about a resource, such as its type and when it was last modified.</p>
+    <p>
+        the Fetch API is a living standard, meaning that it is still in development even though it is fully usable.
+        Using it means that you should make sure you keep up with the current standard. You can get around it by using a
+        library such a jQuery.
+    </p>
     <li><a href="../index.html">back</a></li>
 </body>
 </html>

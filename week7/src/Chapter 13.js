@@ -1,10 +1,17 @@
-const url = 'http://spbooks.github.io/questions.json';
+const url = 'https://pokeapi.co/api/v2/pokemon-species/';
 fetch(url)
+.then( response => {
+    if(response.ok) {
+        return response;
+    }
+    throw Error(response.statusText);
+})
 .then(res => res.json())
 .then(quiz => {
     view.start.addEventListener('click', () => game.start(quiz.questions), false);
     view.response.addEventListener('click', (event) => game.check(event), false);
-});
+})
+.catch( error => console.log('There was an error:', error));
 
 function random(a,b=1) {
     // if only 1 argument is provided, we need to swap the values of a and b
