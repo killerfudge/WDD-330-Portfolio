@@ -1,4 +1,4 @@
-const url = 'https://pokeapi.co/api/v2/pokemon-species/';
+const url = 'http://spbooks.github.io/questions.json';
 fetch(url)
 .then( response => {
     if(response.ok) {
