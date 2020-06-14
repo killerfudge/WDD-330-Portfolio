@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Week 8</title>
+</head>
+<body>
+    <h1>Examples</h1>
+    <ol>
+        <li><a href="src/team.html">Team Assignment</a></li>
+    </ol>
+    <h1>Important New Functions</h1>
+    <h2>transform</h2>
+    <p>translate(), translatex(), translate(), scale(), scaleX(), scaleY(), rotate(), skew(), skewX(), skewY()</p>
+    <h2>Notes</h2>
+    <p>
+        the CSS3 transform property allows you to move and alter in appearance any html element with ease. this is done
+        with transform functions.
+    </p>
+    <p>transforms don’t work on inline elements</p>
+    <p>
+        scaling defaults to expanding or shrinking around the center, though this can be modified by including the
+        transform-origin property
+    </p>
+    <p>
+        to add multiple transformations, simple prove a space-separated list of functions. making a second
+        transformation property will override the first
+    </p>
+    <p>
+        using transform functions only affect the elements they are applied to; other elements don’t readjust to
+        accommodate the changes.
+    </p>
+    <p>
+        rotate defaults to rotating around the center by a specified angle value that can be expressed in degrees(deg),
+        grads, radians, or turns, though deg are typically used. positive values move clockwise and negative more
+        counterclockwise.
+    </p>
+    <p>ordering matters, translate() moves along its own axis, so rotating before hand will change where it moves to</p>
+    <p>transitions all the values of CSS properties to change over time, allowing simple animations</p>
+    <p>
+        the transition-property defines the CSS properties of the element that should be transitioned, with all for all
+        properties as default.
+    </p>
+    <p>transitions are declared in a separate area from the other, default, values.</p>
+    <p>for a property to be transitioned, it needs a valid midpoint.</p>
+    <p>
+        the -webkit- prefix needs to be used for all transition properties and potentially some of the properties that
+        are being transitioned. This allows the code to support older browsers
+    </p>
+    <p>
+        the transition-duration property controls how long the transition will take. can be specified in either
+        seconds(s) or milliseconds(ms). 200ms is generally considered the optimum time for a transition.
+    </p>
+    <p>transition-timing-function allows control over the pace of the changing effect</p>
+    <p>
+        transition-delay sets time in seconds(s) or milliseconds(ms) before transition begins. setting a negative time
+        causes the transition to begin immediately but partway into the animation
+    </p>
+    <p>
+        multiple transitions can be included with the same properties, simply by including a comma separated list for
+        each thing we want different in the order they appear in the transition-property tag
+    </p>
+    <p>
+        the transition sends a transitionend event when it finishes transitioning to the new style or reverting to the
+        old
+    </p>
+    <p>
+        CSS animations can be used to add in additional points of control called keyframes in our transformations. using
+        them requires creating and naming them, then attaching them to an element by including it in the element’s
+        property declaration block. including a duration is required to make it perceptible
+    </p>
+    <p>CSS animations are name using the @keyframe notation</p>
+    <p>animation-direction is used to control whether the animation goes from 0% to 100% or from 100% to 0%</p>
+    <a href="../index.html">back</a>
+</body>
+</html>

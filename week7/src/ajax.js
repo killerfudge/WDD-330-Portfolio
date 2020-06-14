@@ -4,7 +4,7 @@ const apiButton = document.getElementById('chuck');
 const outputDiv = document.getElementById('output');
 
 //Create URL variables
-const textURL = 'https://numbersapi.com/random';
+const textURL = 'http://numbersapi.com/random';
 const apiURL = 'https://api.chucknorris.io/jokes/random';
 
 //Event for when the button for a number fact is clicked

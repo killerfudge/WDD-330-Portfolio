@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="urf-8" />
+    <meta name="viewport", content="width=device-width, initial-scale=1" />
+</head>
+<style>
+
+</style>
+<body>
+<h1>Week8 API</h1>
+<div id="peopleContainer">
+
+</div>
+<button onclick="" id="prev">Prev</button>
+<button onclick="" id="next">Next</button>
+<!-- <a href="" id="prev">Prev</a>
+<a href="" id="next">Next</a> -->
+</body>
+<script>
+        window.onload = function() {
+            let urlApi = "https://swapi.dev/api/people";
+            pullApi(urlApi);
+        };
+
+
+        function pullApi(urlApi){
+            fetch(urlApi)
+            .then((response) => response.json())
+            .then((jsObject) => {
+                // console.log(jsObject);
+                const peopleList = jsObject.results;
+                const peopleContainer = document.getElementById("peopleContainer");
+                peopleContainer.innerHTML = "";
+                for (let i = 0; i < peopleList.length; i++) {
+                    let person = document.createElement('div');
+                    person.textContent = peopleList[i].name;
+                    peopleContainer.appendChild(person);
+                }
+
+                let prev = document.getElementById("prev");
+                let next = document.getElementById("next");
+
+
+                if(jsObject.previous){
+                    // prev.disabled = "false";
+                    // prev.onclick = pullApi(jsObject.previous);
+                    // prev.setAttribute("onclick",`pullApi(${jsObject.previous})`);
+                    prev.removeEventListener("click",pullApi);
+                    // prev.removeEventListener("click", () => {
+                    //     pullApi(jsObject.previous)
+                    // });
+                    prev.addEventListener("click", () => {
+                        pullApi(jsObject.previous);
+                    });
+                } else {
+                    // prev.disabled = "true";
+
+                }
+                if(jsObject.next){
+                    // next.disabled = "false";
+                    //next.onclick = pullApi(jsObject.next);
+                    // next.setAttribute("onclick",`pullApi(${jsObject.next})`);
+                    next.removeEventListener("click",pullApi);
+                    // next.removeEventListener("click", () => {
+                    //     pullApi(jsObject.next)
+                    // });
+                    next.addEventListener("click", () => {
+                        pullApi(jsObject.next);
+                    });
+                } else {
+                    // next.disabled = "true";
+                }
+
+            });
+        }
+    </script>
+
+</html>
