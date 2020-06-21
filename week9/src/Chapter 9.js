@@ -8,7 +8,7 @@ const quiz = [
 const view = {
     score: document.querySelector('#score strong'),
     question: document.getElementById('question'),
-    timer: document.querySelector('#timer strong')
+    timer: document.querySelector('#timer strong'),
     result: document.getElementById('result'),
     info: document.getElementById('info'),
     start: document.getElementById('start'),
