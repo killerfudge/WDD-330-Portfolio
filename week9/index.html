@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>week9</title>
+    <title>Week 9</title>
 </head>
 <body>
     <h1>Examples</h1>
@@ -13,5 +13,71 @@
         <li><a href="src/Team Assignment.html">Team Assignment</a></li>
     </ol>
     <h1>Important New Functions</h1>
+    <h2>window</h2>
+    <p>
+        confirm(), prompt(), open(), close(), moveTo(), resizeTo(), setTimeout(), clearTimeout(), setInterval(),
+        requestAnimationFrame(), cancelAnimationFrame()
+    </p>
+    <h2>window.location</h2>
+    <p>reload(), assign(), replace(), toString()</p>
+    <h2>window.history</h2>
+    <p>go(), forward(), back()</p>
+    <h2>document.cookie</h2>
+    <p>split()</p>
+    <h2>localStorage</h2>
+    <p>setItem(), getItem(), clear()</p>
+    <h2>navigator.geolocation</h2>
+    <p>getCurrentPosition(), watchPosition(), clearWatch()</p>
+    <h2>worker</h2>
+    <p>postMessage(), terminate(), close()</p>
+    <h1>Notes</h1>
+    <p>
+        BOM stands for the Browser Object Model, which is a collection of properties and methods significant to the
+        browser and computer screen. These properties are accessed through the window object, used within the browser
+        environment
+    </p>
+    <p>
+        global variables become a part of the global object. in the cause of the BOM this is the window object. global
+        variables should typically still be referred to without referencing the global object
+    </p>
+    <p>
+        the window object provides several properties that can provide access to information about the user, such as the
+        navigator property that contains the userAgent reference to the browser being used. This one is not always
+        accurate, as it can be modified to appear to be a different browser
+    </p>
+    <p>
+        href property of window.location provides the full url of the current page, and can be changed by assignment to
+        redirect the page
+    </p>
+    <p>
+        hostname property of window.location gives the domain of the current url, while pathname gives the path that
+        follows the domain
+    </p>
+    <p>search property returns a query string</p>
+    <p>window.history provides access to pages previously visited during the current browser session.</p>
+    <p>window.screen provides information of the screen the browser is displayed on.</p>
+    <p>availHeight and availWidth give the height and width of the screen not taken by operating system menus</p>
+    <p>
+        document.cookie is a special string that simply adds to the end when you assign a new value to it, instead of
+        replacing what was already there. it uses a name paired with a value, and information can be changed by setting
+        the same name to a different value
+    </p>
+    <p>
+        by default, cookies are deleted once a browser session is finished. it can be made persistent by adding ‘;
+        expires=date’ at the end of the cookie, with date being UTC string format dd-mon-yyyy hh:mm:ss
+    </p>
+    <p>the data attribute allows the programmer to create custom attributes unique to that particular page</p>
+    <p>
+        data attributes must start with ‘data-‘, contain only lowercase letters, numbers, hyphens, dots, colons, or
+        underscores, and include an optional string value
+    </p>
+    <p>any attributes created using the data attribute are accessed with the dataset property</p>
+    <p>saving a value to local storage creates a storage event</p>
+    <p>workers can be created to allow background threads to work, though they are not usable in Chrome</p>
+    <p>
+        websockets allow two-wo communication with a server, allowing the connection to remain open after a request is
+        made, and the response to be sent whenever it is ready without requiring multiple requests
+    </p>
+    <a href="../index.html">back</a>
 </body>
 </html>
