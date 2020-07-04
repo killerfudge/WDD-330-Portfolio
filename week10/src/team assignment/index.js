@@ -15,7 +15,7 @@ async function buildUrl(baseUrl){
 
     let builtUrl = baseUrl + "&latitude=" + latitude + "&longitude=" + longitude + "&maxradiuskm=100"; 
     return builtUrl;
-};
+}
 
 let newUrl = buildUrl(baseUrl);
 console.log(newUrl);
